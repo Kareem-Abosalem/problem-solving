@@ -1,0 +1,16 @@
+vector<int> get_divisors(int n)
+{
+    vector<int>divisors;
+    for (int i = 1; i * i <= n; i++)
+    {
+        if (n % i == 0)
+        {
+            divisors.push_back(i);
+            if (i * i != n)
+            {
+                divisors.push_back(n / i);
+            }
+        }
+    }
+    return divisors;
+}
