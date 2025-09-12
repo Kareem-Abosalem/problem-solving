@@ -9,4 +9,5 @@ void pre() // Don't forget to call pre  in main
         {
             divs[j].push_back(i);
         }   
-    }   
+    }  
+}
