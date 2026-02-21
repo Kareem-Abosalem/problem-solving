@@ -17,7 +17,7 @@ void file()
     freopen("output.txt", "w", stdout);
 #endif
 }
-int n;
+
 vector<vector<int>>sp;
 int merge(int a,int b)
 {
@@ -25,6 +25,7 @@ int merge(int a,int b)
 }
 void build(const vector<int>&v)
 {
+    const int n = v.size();
     sp[0] = v;
     for (int msk = 1; (1 << msk) <= n ; msk++)
     {
@@ -59,7 +60,7 @@ int queryO1(int l, int r)
 }
 void solve() 
 {
-    cin >> n;
+    int n; cin >> n;
     vector<int>v(n);
     for(auto &i : v) cin >>i;
 
@@ -72,8 +73,6 @@ void solve()
         l--, r--;
         cout << query(l,r) << '\n';
     }
-    
-
 }
 signed main()
 {
